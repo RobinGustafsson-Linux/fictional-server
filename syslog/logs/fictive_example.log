@@ -1,0 +1,50 @@
+2025-05-22T09:53:21.554061+00:00 fictive sudo: pam_unix(sudo:session): session opened for user root(uid=0) by robin(uid=1000)
+2025-05-22T09:53:21.555445+00:00 fictive sudo: pam_unix(sudo:session): session closed for user root
+2025-05-22T09:53:21.656155+00:00 fictive named[1189]: network unreachable resolving 'com/NS/IN': 2001:500:1::53#53
+2025-05-22T09:53:23.326480+00:00 fictive named[1189]: network unreachable resolving './NS/IN': 2001:503:c27::2:30#53
+2025-05-22T09:53:23.326596+00:00 fictive named[1189]: network unreachable resolving './NS/IN': 2001:500:2f::f#53
+2025-05-22T09:53:23.326620+00:00 fictive named[1189]: network unreachable resolving './NS/IN': 2001:7fe::53#53
+2025-05-22T09:53:23.326638+00:00 fictive named[1189]: network unreachable resolving './NS/IN': 2001:500:12::d0d#53
+2025-05-22T09:53:23.326654+00:00 fictive named[1189]: network unreachable resolving './NS/IN': 2001:dc3::35#53
+2025-05-22T09:53:23.326671+00:00 fictive named[1189]: network unreachable resolving './NS/IN': 2001:500:2d::d#53
+2025-05-22T09:53:23.326691+00:00 fictive named[1189]: network unreachable resolving './NS/IN': 2001:503:ba3e::2:30#53
+2025-05-22T09:53:23.326776+00:00 fictive named[1189]: network unreachable resolving './NS/IN': 2001:500:a8::e#53
+2025-05-22T09:53:23.326796+00:00 fictive named[1189]: network unreachable resolving './NS/IN': 2001:7fd::1#53
+2025-05-22T09:53:23.681019+00:00 fictive named[1189]: resolver priming query complete: timed out
+2025-05-22T09:53:25.683924+00:00 fictive named[1189]: shut down hung fetch while resolving 'ntp.ubuntu.com/A'
+2025-05-22T09:53:25.684042+00:00 fictive named[1189]: shut down hung fetch while resolving 'ntp.ubuntu.com/AAAA'
+2025-05-22T09:53:29.236655+00:00 fictive named[1189]: shut down hung fetch while resolving 'storecatalogrevocation.storequality.microsoft.com/A'
+2025-05-22T09:53:29.805860+00:00 fictive named[1189]: shut down hung fetch while resolving 'v10.events.data.microsoft.com/A'
+2025-05-22T09:53:31.148608+00:00 fictive named[1189]: shut down hung fetch while resolving 'time.windows.com/A'
+2025-05-22T09:53:32.595491+00:00 fictive named[1189]: network unreachable resolving './NS/IN': 2001:500:2::c#53
+2025-05-22T09:53:33.398308+00:00 fictive named[1189]: network unreachable resolving './NS/IN': 2001:503:c27::2:30#53
+2025-05-22T09:53:33.398377+00:00 fictive named[1189]: network unreachable resolving './NS/IN': 2001:500:2f::f#53
+2025-05-22T09:53:33.398396+00:00 fictive named[1189]: network unreachable resolving './NS/IN': 2001:7fe::53#53
+2025-05-22T09:53:33.398412+00:00 fictive named[1189]: network unreachable resolving './NS/IN': 2001:500:1::53#53
+2025-05-22T09:53:33.398428+00:00 fictive named[1189]: network unreachable resolving './NS/IN': 2001:500:12::d0d#53
+2025-05-22T09:53:33.398444+00:00 fictive named[1189]: network unreachable resolving './NS/IN': 2001:dc3::35#53
+2025-05-22T09:53:33.398465+00:00 fictive named[1189]: network unreachable resolving './NS/IN': 2001:500:2d::d#53
+2025-05-22T09:53:33.398483+00:00 fictive named[1189]: network unreachable resolving './NS/IN': 2001:500:9f::42#53
+2025-05-22T09:53:33.398499+00:00 fictive named[1189]: network unreachable resolving './NS/IN': 2001:7fd::1#53
+2025-05-22T09:53:33.398515+00:00 fictive named[1189]: network unreachable resolving './NS/IN': 2001:500:a8::e#53
+2025-05-22T09:53:33.398531+00:00 fictive named[1189]: network unreachable resolving './NS/IN': 2001:503:ba3e::2:30#53
+2025-05-22T09:53:33.688982+00:00 fictive named[1189]: resolver priming query complete: timed out
+2025-05-22T09:53:33.936789+00:00 fictive sudo:    robin : TTY=pts/0 ; PWD=/var/log/windows ; USER=root ; COMMAND=/usr/bin/chmod 755 /var/log/windows
+2025-05-22T09:53:33.938363+00:00 fictive sudo: pam_unix(sudo:session): session opened for user root(uid=0) by robin(uid=1000)
+2025-05-22T09:53:33.941183+00:00 fictive sudo: pam_unix(sudo:session): session closed for user root
+2025-05-22T09:53:36.144219+00:00 fictive named[1189]: network unreachable resolving 'com/NS/IN': 2001:500:2::c#53
+2025-05-22T09:53:38.723986+00:00 fictive named[1189]: shut down hung fetch while resolving 'ntp.ubuntu.com/AAAA'
+2025-05-22T09:53:38.724051+00:00 fictive named[1189]: shut down hung fetch while resolving 'ntp.ubuntu.com/A'
+2025-05-22T09:53:39.118654+00:00 fictive named[1189]: shut down hung fetch while resolving 'g.live.com/A'
+2025-05-22T09:53:42.216347+00:00 fictive sudo:    robin : TTY=pts/0 ; PWD=/var/log/windows ; USER=root ; COMMAND=/usr/bin/systemctl restart rsyslog
+2025-05-22T09:53:42.218251+00:00 fictive sudo: pam_unix(sudo:session): session opened for user root(uid=0) by robin(uid=1000)
+2025-05-22T09:53:42.331416+00:00 fictive kernel: audit: type=1400 audit(1747907622.297:159): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="rsyslogd" pid=4643 comm="apparmor_parser"
+2025-05-22T09:53:42.226027+00:00 fictive systemd[1]: Stopping rsyslog.service - System Logging Service...
+2025-05-22T09:53:42.226991+00:00 fictive rsyslogd: [origin software="rsyslogd" swVersion="8.2312.0" x-pid="4465" x-info="https://www.rsyslog.com"] exiting on signal 15.
+2025-05-22T09:53:42.236141+00:00 fictive systemd[1]: rsyslog.service: Deactivated successfully.
+2025-05-22T09:53:42.236678+00:00 fictive systemd[1]: Stopped rsyslog.service - System Logging Service.
+2025-05-22T09:53:42.245899+00:00 fictive systemd[1]: Starting rsyslog.service - System Logging Service...
+2025-05-22T09:53:42.331395+00:00 fictive systemd[1]: Started rsyslog.service - System Logging Service.
+2025-05-22T09:53:42.333230+00:00 fictive rsyslogd: warning during parsing file /etc/rsyslog.conf, on or before line 56: STOP is followed by unreachable statements!  [v8.2312.0 try https://www.rsyslog.com/e/2357 ]
+2025-05-22T09:53:42.333403+00:00 fictive rsyslogd: imuxsock: Acquired UNIX socket '/run/systemd/journal/syslog' (fd 3) from systemd.  [v8.2312.0]
+2025-05-22T09:53:42.333438+00:00 fictive rsyslogd: rsyslogd's groupid changed to 104
