@@ -26,7 +26,8 @@ DNS server is configured with BIND9 and holds a forward and reverse lookup on th
 -Points 192.168.1.1 to:
 - "ns1.fictive.local"
 - "www.fictive.local"
-Configfiles are located in: 
+Configfiles are located in:
+ 
 dhcp-dns/
 ├── dhcpd.conf # DHCP-konfiguration
 ├── named.conf.local # Zones for DNS
