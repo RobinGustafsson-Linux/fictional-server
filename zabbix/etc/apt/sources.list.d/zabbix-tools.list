@@ -1,0 +1,3 @@
+# Zabbix tools repository
+deb [arch=all] https://repo.zabbix.com/zabbix-tools/debian-ubuntu noble main
+deb-src https://repo.zabbix.com/zabbix-tools/debian-ubuntu noble main

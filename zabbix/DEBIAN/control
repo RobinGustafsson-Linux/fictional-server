@@ -1,0 +1,10 @@
+Package: zabbix-release
+Version: 1:7.0-2+ubuntu24.04
+Architecture: all
+Maintainer: Zabbix Packager <info@zabbix.com>
+Installed-Size: 27
+Section: net
+Priority: extra
+Homepage: http://www.zabbix.com
+Description: Zabbix official repository configuration
+ This package provide Zabbix official repository configuration files.

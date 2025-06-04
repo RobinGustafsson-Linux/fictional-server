@@ -1,0 +1,145 @@
+zabbix-release (1:7.0-2+ubuntu24.04) stable; urgency=low
+
+  * added zabbix-tools repository
+
+ -- Zabbix Packager <info@zabbix.com>  Wed, 29 May 2023 11:45:54 +0300
+
+zabbix-release (1:7.0-1) stable; urgency=low
+
+  * update to 7.0
+
+ -- Zabbix Packager <info@zabbix.com>  Wed, 29 May 2023 11:45:54 +0300
+
+zabbix-release (1:6.5-2) stable; urgency=low
+
+  * fixed repo url for debian-arm64
+
+ -- Zabbix Packager <info@zabbix.com>  Thu, 28 Sep 2023 13:24:54 +0300
+
+zabbix-release (1:6.5-1) stable; urgency=low
+
+  * update to 6.5
+
+ -- Zabbix Packager <info@zabbix.com>  Mon, 22 May 2023 14:45:34 +0300
+
+zabbix-release (1:6.4-1) stable; urgency=low
+
+  * update to 6.4
+  * removed zabbix-agent2-plugins repository
+
+ -- Zabbix Packager <info@zabbix.com>  Tue, 7 Mar 2023 11:33:20 +0200
+
+zabbix-release (1:6.3-3) stable; urgency=low
+
+  * fixed file permissions to 644; removed executable bit
+
+ -- Zabbix Packager <info@zabbix.com>  Mon, 14 Nov 2022 11:08:53 +0200
+
+zabbix-release (1:6.3-2) stable; urgency=low
+
+  * fixed arch setting for arm64 and armhf
+
+ -- Zabbix Packager <info@zabbix.com>  Tue, 1 Nov 2022 13:12:41 +0200
+
+zabbix-release (1:6.3-1) stable; urgency=low
+
+  * update to 6.3
+
+ -- Zabbix Packager <info@zabbix.com>  Mon, 29 Aug 2022 11:33:20 +0300
+
+zabbix-release (1:6.2-1) stable; urgency=low
+
+  * update to 6.2
+
+ -- Zabbix Packager <info@zabbix.com>  Mon, 4 Jul 2022 12:34:59 +0300
+
+zabbix-release (1:6.1-2) stable; urgency=low
+
+  * added zabbix-agent2-plugins repository
+
+ -- Zabbix Packager <info@zabbix.com>  Wed, 8 Jun 2022 15:31:06 +0300
+
+zabbix-release (1:6.1-1) stable; urgency=low
+
+  * update to 6.1
+
+ -- Zabbix Packager <info@zabbix.com>  Tue, 22 Feb 2022 17:29:44 +0200
+
+zabbix-release (1:6.0-2) stable; urgency=low
+
+  * fixed repo url for raspbian
+
+ -- Zabbix Packager <info@zabbix.com>  Tue, 15 Feb 2022 13:34:40 +0200
+
+zabbix-release (1:6.0-1) stable; urgency=low
+
+  * update to 6.0
+
+ -- Zabbix Packager <info@zabbix.com>  Fri, 11 Feb 2022 14:08:44 +0200
+
+zabbix-release (1:5.5-1) stable; urgency=low
+
+  * update to 5.5
+
+ -- Zabbix Packager <info@zabbix.com>  Tue, 31 Aug 2021 13:21:58 +0300
+
+zabbix-release (1:5.4-1) stable; urgency=low
+
+  * update to 5.4
+  * using https in zabbix.list
+
+ -- Zabbix Packager <info@zabbix.com>  Fri, 14 May 2021 13:34:39 +0300
+
+zabbix-release (1:5.3-1) stable; urgency=low
+
+  * update to 5.3
+
+ -- Zabbix Packager <info@zabbix.com>  Mon, 25 Jan 2021 10:00:00 +0200
+
+zabbix-release (1:5.2-1) stable; urgency=low
+
+  * update to 5.2
+
+ -- Zabbix Packager <info@zabbix.com>  Mon, 26 Oct 2020 10:00:00 +0200
+
+zabbix-release (1:5.1-1) stable; urgency=low
+
+  * update to 5.1
+  * replaced codenames in package names with distro & numeric version
+
+ -- Zabbix Packager <info@zabbix.com>  Mon, 17 Aug 2020 10:00:00 +0300
+
+zabbix-release (1:5.0-1) stable; urgency=low
+
+  * update to 5.0
+  * frontend package has been deprecated on stretch and xenial
+  * please see https://www.zabbix.com/documentation/5.0/manual/installation/install_from_packages/frontend_on_debian
+
+ -- Zabbix Packager <info@zabbix.com>  Mon, 11 May 2020 10:00:00 +0300
+
+zabbix-release (1:4.5-1) stable; urgency=low
+
+  * update to 4.5
+
+ -- Zabbix Packager <info@zabbix.com>  Mon, 27 Jan 2020 10:37:11 +0200
+
+zabbix-release (1:4.4-1) stable; urgency=low
+
+  * update to 4.4
+
+ -- Zabbix Packager <info@zabbix.com>  Mon, 7 Oct 2019 10:58:57 +0300
+
+zabbix-release (1:4.3-2) stable; urgency=low
+
+  * added epoch 1
+
+ -- Zabbix Packager <info@zabbix.com>  Fri, 4 Oct 2019 16:10:57 +0300
+
+zabbix-release (4.3-1) stable; urgency=low
+
+  * update to 4.3
+
+ -- Zabbix Packager <info@zabbix.com>  Wed, 17 Jul 2019 15:21:00 +0200
+
+# Older entries have been removed from this changelog.
+# To read the complete changelog use `apt changelog zabbix-release`.

@@ -1,0 +1,7 @@
+zabbix-release for Debian
+-------------------------
+
+This package provide Zabbix official repository configuration files.
+Zabbix official repository is located at https://repo.zabbix.com.
+
+ -- Zabbix Packager <info@zabbix.com> Tue, 7 Mar 2023 12:34:59 +0200
