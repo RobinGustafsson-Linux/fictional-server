@@ -1,1 +1,3 @@
 zabbix/zabbix-7.0.2/
+logs/*.log
+!logs/README.md
