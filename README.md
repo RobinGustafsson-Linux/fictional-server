@@ -107,8 +107,8 @@ Projektstatus
 - [x] Vecka 1 – Projektplan & riskanalys
 - [x] Vecka 2 – Installation & härdning
 - [x] Vecka 3 – DHCP + DNS (BIND9)
-- [X] Vecka 4 – Syslog + Logrotate + backupscript
-- [ ] Vecka 5 – Zabbix Server + agent
-- [ ] Vecka 6 – Test, felsökning, rapport
+- [x] Vecka 4 – Syslog + Logrotate + backupscript
+- [x] Vecka 5 – Zabbix Server + agent
+- [x] Vecka 6 – Test, felsökning, rapport
 
 ## automatisering
