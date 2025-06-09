@@ -29,7 +29,7 @@ Projektet är uppbyggt i en virtualiserad miljö med hjälp av Oracle VirtualBox
 - Statiska IP-adresser används
 - Ubuntu-server: 192.168.1.1
 - Windows-klient: 192.168.1.100
-- DNS-servern fungerar även som DHCP- och syslog-server
+- DNS-servern fungerar även som DHCP och syslog-server
 
 ### Installerade tjänster
 - DHCP-server (`isc-dhcp-server`)
@@ -61,18 +61,18 @@ DNS server är konfigurerad med BIND9 och har en forward samt en reverse lookup 
 
 #### Configuration
 
--**Domain:** "fictive.local"
--**DNS-server:** "ns1.fictive.local" > 192.168.1.1
+-**Domain:** `fictive.local`
+-**DNS-server:** `ns1.fictive.local` > 192.168.1.1
 -**Pointers:**
-  -"www.fictive.local" CNAME to web.fictive.local
-  -"Web.fictive.local > 192.168.1.1
+  -`www.fictive.local` CNAME to web.fictive.local
+  -`Web.fictive.local` > 192.168.1.1
 
   #### Reverse DNS
 
 -"**Zone:** 1.168.192.in-addr.arpa
 -Points 192.168.1.1 to:
-- "ns1.fictive.local"
-- "www.fictive.local"
+- `ns1.fictive.local`
+- `www.fictive.local`
 
 
 Configfiles are located in:
@@ -102,6 +102,31 @@ To demostrate a syslog-server recieving logs from a windows client via NXLog, ex
 #### Logexample includes:
 -Events from "Event Viewer" (systemstart, servicestart)
 -Manually generated test logs Via PowerShell or pinging the server from the client
+
+### 📊 Zabbix Server + Agent
+
+Zabbix 7.0 LTS används för övervakning av systemresurser som CPU, RAM och nätverkstrafik. Servern är installerad på en Ubuntu 24.04 server och övervakar sig själv via en lokal Zabbix-agent.
+
+#### 🧱 Installation
+- Zabbix Server + webbgränssnitt installerades via Zabbix officiella apt-repo
+- Databasen är MariaDB och användaren `zabbix` med egna rättigheter
+- Zabbix frontend är tillgänglig via webbläsare på `http://192.168.1.1/zabbix`
+
+#### ⚙️ Konfigurationsfiler
+Följande filer är inkluderade i repot:
+- `zabbix/zabbix_server.conf` – konfiguration för Zabbix-servern
+- `zabbix/zabbix_agentd.conf` – agent som körs lokalt på samma server
+- `zabbix/zabbix.conf.php` – frontendinställningar för PHP
+- `zabbix/zabbix_gui_result.png` – skärmbild som visar aktiv övervakning i Zabbix GUI
+
+#### 🔍 Övervakning
+Agenten är konfigurerad mot `127.0.0.1:150` och rapporterar:
+- CPU-användning
+- Minnesanvändning
+- Nätverkstrafik per interface
+- Systemtid, uptime, och belastning
+
+> All konfiguration och övervakning är dokumenterad och automatiserat via skript i `scripts/`.
 
 Projektstatus
 - [x] Vecka 1 – Projektplan & riskanalys
