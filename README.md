@@ -42,6 +42,27 @@ Miljön används för att simulera ett fiktivt nätverk för ett företag med ~1
 
 ## Tjänster som implementeras
 
+###  SSH-säkerhet & autentisering
+
+För att säkra inloggning via SSH är följande åtgärder implementerade i servermiljön:
+
+####  Nyckelbaserad inloggning
+- Användaren `robin` loggar in via SSH med en RSA-nyckel 
+- Servern accepterar endast inloggning med publik nyckel via `~/.ssh/authorized_keys`
+- Lösenordsinloggning är inaktiverad i `sshd_config`
+
+####  Fail2ban
+- Fail2ban är installerat och skyddar mot brute force attacker på SSH
+- Tjänsten övervakar autentiseringsförsök och spärrar IP-adresser vid upprepade misslyckade inloggningar
+
+####  Least Privilege (minsta privilegier)
+- Root inloggning via SSH är inaktiverad (`PermitRootLogin no`)
+- En icke-root-användare (`robin`) används för administration, med begränsade rättigheter och `sudo` vid behov
+
+#### Filer
+- `ssh/sshd_config` – modifierad konfiguration för SSH
+- `ssh/fail2ban-jail.local` – eventuell lokal konfiguration för Fail2ban
+
 ### 🔧 DHCP (isc-dhcp-server)
 
 DHCP-servern är installerad på Ubuntu-servern och tilldelar automatiskt IP-adresser till klienter i nätverket `192.168.1.0/24`.
@@ -75,7 +96,7 @@ DNS server är konfigurerad med BIND9 och har en forward samt en reverse lookup 
 - `www.fictive.local`
 
 
-Configfiles are located in:
+Konfigfiler är sparade i:
  
 dhcp-dns/
 ├── dhcpd.conf # DHCP-konfiguration
@@ -84,24 +105,24 @@ dhcp-dns/
 ├── db.fictive.local # Forward-zon for fictive.local
 └── db.192.168.1 # Reverse-zon for 192.168.1.0/24
 
-BIND9 had issues with permissions since my files are in my git-repo. Outside of /etc/bind, had to configre AppArmor:
-- AppArmor-profile for "named" uppdated to allow "/home/robin/Desktop/fictional-server/dhcp-dns/zonfiler/** r;"
-- Permissions were set with these commands:
+BIND9 hade problem med rättigheter eftersom mina filer är i min git-repo. Utanför /etc/bind, behövde konfa AppArmor:
+- AppArmor-profile för "named" uppdaterad att tillåta "/home/robin/Desktop/fictional-server/dhcp-dns/zonfiler/** r;"
+- Rättigheter var satta med dessa kommandon:
 - chmod 644 ~/Desktop
 - chmod 644 ~/Desktop/fictional-server/dhcp-dns/zonfiler/*
 
   
 ## Syslog & logrotate
 
-To demostrate a syslog-server recieving logs from a windows client via NXLog, example file is included. 
+Att demonstrera att syslog-server tar emot logs från en windows klient via NXLog, exempel fil är inkluderad. 
 
--Loggfiles are originated from /var/log/windows/fictive.log on the server
--The logs generates from NXLog on a windows client with hostname "fictive"
--The example log file is only 50 rows saved in the repo to protect sensitive information and unnecessary traffic
+-Loggfiler är från början från /var/log/windows/fictive.log på server
+-Loggarna genererar från NXLog på en Windows klient med hostname "fictive"
+-Exempel logg filn är bara 50 rader sparad i repon för att skydda information och skräp trafik
 
-#### Logexample includes:
--Events from "Event Viewer" (systemstart, servicestart)
--Manually generated test logs Via PowerShell or pinging the server from the client
+#### Loggexempel innehåller:
+-Events från "Event Viewer" (systemstart, servicestart)
+-Manuellt genererat test logs via PowerShell eller pinga servern från klienten
 
 ### 📊 Zabbix Server + Agent
 
