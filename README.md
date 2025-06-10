@@ -63,7 +63,7 @@ För att säkra inloggning via SSH är följande åtgärder implementerade i ser
 - `ssh/sshd_config` – modifierad konfiguration för SSH
 - `ssh/fail2ban-jail.local` – eventuell lokal konfiguration för Fail2ban
 
-### 🔧 DHCP (isc-dhcp-server)
+###  DHCP (isc-dhcp-server)
 
 DHCP-servern är installerad på Ubuntu-servern och tilldelar automatiskt IP-adresser till klienter i nätverket `192.168.1.0/24`.
 
@@ -124,30 +124,30 @@ Att demonstrera att syslog-server tar emot logs från en windows klient via NXLo
 -Events från "Event Viewer" (systemstart, servicestart)
 -Manuellt genererat test logs via PowerShell eller pinga servern från klienten
 
-### 📊 Zabbix Server + Agent
+###  Zabbix Server + Agent
 
 Zabbix 7.0 LTS används för övervakning av systemresurser som CPU, RAM och nätverkstrafik. Servern är installerad på en Ubuntu 24.04 server och övervakar sig själv via en lokal Zabbix-agent.
 
-#### 🧱 Installation
+####  Installation
 - Zabbix Server + webbgränssnitt installerades via Zabbix officiella apt-repo
 - Databasen är MariaDB och användaren `zabbix` med egna rättigheter
 - Zabbix frontend är tillgänglig via webbläsare på `http://192.168.1.1/zabbix`
 
-#### ⚙️ Konfigurationsfiler
+#### ⚙ Konfigurationsfiler
 Följande filer är inkluderade i repot:
 - `zabbix/zabbix_server.conf` – konfiguration för Zabbix-servern
 - `zabbix/zabbix_agentd.conf` – agent som körs lokalt på samma server
 - `zabbix/zabbix.conf.php` – frontendinställningar för PHP
 - `zabbix/zabbix_gui_result.png` – skärmbild som visar aktiv övervakning i Zabbix GUI
 
-#### 🔍 Övervakning
+####  Övervakning
 Agenten är konfigurerad mot `127.0.0.1:150` och rapporterar:
 - CPU-användning
 - Minnesanvändning
 - Nätverkstrafik per interface
 - Systemtid, uptime, och belastning
 
-> All konfiguration och övervakning är dokumenterad och automatiserat via skript i `scripts/`.
+All konfiguration och övervakning är dokumenterad och automatiserat via skript i `scripts/`.
 
 Projektstatus
 - [x] Vecka 1 – Projektplan & riskanalys
