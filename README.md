@@ -176,4 +176,38 @@ Projektstatus
 - [x] Vecka 5 – Zabbix Server + agent
 - [x] Vecka 6 – Test, felsökning, rapport
 
-## automatisering
+## Automatisering
+
+###  Automatisering med Bash & Crontab
+
+Projektet innehåller två automatiseringsskript som körs schemalagt med `crontab` för att underlätta systemunderhåll.
+
+#### 🗂 Skript
+
+1. `backup_configs.sh`  
+   - Säkerhetskopierar viktiga konfigurationsfiler från systemet (t.ex. Zabbix, rsyslog, SSH)
+   - Sparar kopior i `backups/`-mappen i projektet
+   - Utför automatiskt en `git add`, `commit` och `push` varje natt kl 02:00
+
+2. `check_services.sh`  
+   - Kontrollerar status för centrala tjänster (t.ex. `rsyslog`, `zabbix-server`, `zabbix-agent`)
+   - Skriver resultatet till syslog
+   - Körs var 15:e minut
+
+####  Schemaläggning
+
+Skripten är aktiva via användarens crontab:
+
+### bash
+# backup kl 02:00 dagligen
+0 2 * * * /bin/bash ~/Desktop/fictional-server/scripts/backup_configs.sh >> ~/Desktop/fictional-server/logs/backup.log 2>&1
+
+# tjänstkontroll var 15:e minut
+*/15 * * * * /bin/bash ~/Desktop/fictional-server/scripts/check_services.sh >> ~/Desktop/fictional-server/logs/servicecheck.log 2>&1
+
+### Loggfiler
+logs/backup.log – innehåller output från backupskriptet
+
+logs/servicecheck.log – visar resultat från tjänstkontrollen
+
+Loggarna roteras manuellt eller med hjälp av logrotate
