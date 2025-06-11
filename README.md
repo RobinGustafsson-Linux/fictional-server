@@ -63,7 +63,7 @@ För att säkra inloggning via SSH är följande åtgärder implementerade i ser
 - `ssh/sshd_config` – modifierad konfiguration för SSH
 - `ssh/fail2ban-jail.local` – eventuell lokal konfiguration för Fail2ban
 
-###  DHCP (isc-dhcp-server)
+##  DHCP (isc-dhcp-server)
 
 DHCP-servern är installerad på Ubuntu-servern och tilldelar automatiskt IP-adresser till klienter i nätverket `192.168.1.0/24`.
 
@@ -123,6 +123,25 @@ Att demonstrera att syslog-server tar emot logs från en windows klient via NXLo
 #### Loggexempel innehåller:
 -Events från "Event Viewer" (systemstart, servicestart)
 -Manuellt genererat test logs via PowerShell eller pinga servern från klienten
+
+### 🪵 NXLog – Loggöverföring från Windows-klient
+
+För att möjliggöra centraliserad logghantering i nätverket används **NXLog** på en Windows 10-klient. Denna agent samlar in systemloggar och skickar dem till rsyslog på Ubuntu-servern via **UDP port 514**.
+
+####  Funktion
+- NXLog är konfigurerad att läsa loggar från Windows Event Viewer (`im_msvistalog`)
+- Loggar skickas till rsyslog-servern med `om_udp` i syslog-format
+- Rsyslog tar emot loggar och sparar dem i:  
+  `/var/log/windows/fictive.log`
+
+####  Testloggar
+För test skapades manuella logghändelser i PowerShell:
+
+### powershell
+Write-EventLog -LogName Application -Source "NXLogTestSource" -EntryType Information -EventId 300 -Message "Testlogg från klient"
+Loggen kunde visas med kommando:
+tail -f /var/log/windows/fictive.log
+nxlog.conf – finns på Windows-klienten men struktur dokumenterad i README
 
 ###  Zabbix Server + Agent
 
