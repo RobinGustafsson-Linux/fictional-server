@@ -47,7 +47,7 @@ Miljön används för att simulera ett fiktivt nätverk för ett företag med ~1
 För att säkra inloggning via SSH är följande åtgärder implementerade i servermiljön:
 
 ####  Nyckelbaserad inloggning
-- Användaren `robin` loggar in via SSH med en RSA-nyckel 
+- Användaren `robin1` loggar in via SSH med en RSA-nyckel 
 - Servern accepterar endast inloggning med publik nyckel via `~/.ssh/authorized_keys`
 - Lösenordsinloggning är inaktiverad i `sshd_config`
 
@@ -133,7 +133,7 @@ Zabbix 7.0 LTS används för övervakning av systemresurser som CPU, RAM och nä
 - Databasen är MariaDB och användaren `zabbix` med egna rättigheter
 - Zabbix frontend är tillgänglig via webbläsare på `http://192.168.1.1/zabbix`
 
-#### ⚙ Konfigurationsfiler
+####  Konfigurationsfiler
 Följande filer är inkluderade i repot:
 - `zabbix/zabbix_server.conf` – konfiguration för Zabbix-servern
 - `zabbix/zabbix_agentd.conf` – agent som körs lokalt på samma server
