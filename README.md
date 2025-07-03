@@ -124,7 +124,7 @@ Att demonstrera att syslog-server tar emot logs från en windows klient via NXLo
 -Events från "Event Viewer" (systemstart, servicestart)
 -Manuellt genererat test logs via PowerShell eller pinga servern från klienten
 
-### 🪵 NXLog – Loggöverföring från Windows-klient
+###  NXLog – Loggöverföring från Windows-klient
 
 För att möjliggöra centraliserad logghantering i nätverket används **NXLog** på en Windows 10-klient. Denna agent samlar in systemloggar och skickar dem till rsyslog på Ubuntu-servern via **UDP port 514**.
 
@@ -182,7 +182,7 @@ Projektstatus
 
 Projektet innehåller två automatiseringsskript som körs schemalagt med `crontab` för att underlätta systemunderhåll.
 
-#### 🗂 Skript
+####  Skript
 
 1. `backup_configs.sh`  
    - Säkerhetskopierar viktiga konfigurationsfiler från systemet (t.ex. Zabbix, rsyslog, SSH)
@@ -198,11 +198,11 @@ Projektet innehåller två automatiseringsskript som körs schemalagt med `cront
 
 Skripten är aktiva via användarens crontab:
 
-### bash
+### Bash
 # backup kl 02:00 dagligen
 0 2 * * * /bin/bash ~/Desktop/fictional-server/scripts/backup_configs.sh >> ~/Desktop/fictional-server/logs/backup.log 2>&1
 
-# tjänstkontroll var 15:e minut
+# Tjänstkontroll var 15:e minut
 */15 * * * * /bin/bash ~/Desktop/fictional-server/scripts/check_services.sh >> ~/Desktop/fictional-server/logs/servicecheck.log 2>&1
 
 ### Loggfiler
